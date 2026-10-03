@@ -1,5 +1,6 @@
-<p>
-  {
+<script type="application/json" id="xray-configs">
+[
+  { {
   "remarks": "3. VLESS - IPv4 : 443",
   "version": {
     "min": "26.2.6"
@@ -192,8 +193,8 @@
     }
   },
   "stats": {}
-}
-  {
+} },
+  { {
   "remarks": "2. VLESS - IPv4 : 443",
   "version": {
     "min": "26.2.6"
@@ -386,9 +387,9 @@
     }
   },
   "stats": {}
-}
-  {
-  "remarks": "2. Trojan - IPv4 : 443",
+} },
+  { {
+  "remarks": "2. VLESS - IPv4 : 443",
   "version": {
     "min": "26.2.6"
   },
@@ -438,13 +439,18 @@
   ],
   "outbounds": [
     {
-      "protocol": "trojan",
+      "protocol": "vless",
       "settings": {
-        "servers": [
+        "vnext": [
           {
             "address": "172.67.136.81",
             "port": 443,
-            "password": "380ca2838817cc6d9b90d641"
+            "users": [
+              {
+                "id": "eb797524-c0c2-4915-a1d1-7a6c5ddd4a51",
+                "encryption": "none"
+              }
+            ]
           }
         ]
       },
@@ -452,11 +458,11 @@
         "network": "ws",
         "wsSettings": {
           "host": "zanaplus.zanazana1232026.workers.dev",
-          "path": "/tr/50vEvwJX7F81mPPIcCVEYJMR6?ed=2560"
+          "path": "/vl/63HMeY84OHy8IgyBd?ed=2560"
         },
         "security": "tls",
         "tlsSettings": {
-          "serverName": "zaNaplus.zANAzaNA1232026.WOrKErS.Dev",
+          "serverName": "ZANAPLUS.ZaNaZANa1232026.WorkERS.deV",
           "fingerprint": "chrome",
           "alpn": [
             "http/1.1"
@@ -575,8 +581,8 @@
     }
   },
   "stats": {}
-}
-  {
+} },
+  { {
   "remarks": "3. Trojan - IPv4 : 443",
   "version": {
     "min": "26.2.6"
@@ -764,5 +770,6 @@
     }
   },
   "stats": {}
-}
-</p>
+} }
+]
+</script>
